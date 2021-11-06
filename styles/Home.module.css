@@ -1,5 +1,19 @@
 .container {
   padding: 0 2rem;
+  background-color: #00f;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.map{
+  background-color:#f00;
+  flex: 1;
+}
+
+.start{
+  background-color: #0f0;
+  flex: 1;
 }
 
 .main {
