@@ -2,7 +2,7 @@ import {useState} from 'react'
 import tw from 'tailwind-styled-components'
 import Link from 'next/link'
 
-const search = () => {
+const Search = () => {
 
     const [pickup, setPickup] = useState("")
     const [dropoff, setDropoff] = useState("")
@@ -10,7 +10,7 @@ const search = () => {
     return (
         <Wrapper>
             <ButtonContainer>
-                <Link href="/">
+                <Link href="/" passHref={true}>
                     <BackButton src="/back.png" alt="back"/>
                 </Link>
             </ButtonContainer>
@@ -44,7 +44,7 @@ const search = () => {
                     pickup: pickup,
                     dropoff: dropoff
                 }
-            }}>
+            }} passHref={true}>
                 <ConfirmButton>
                     Confirm Locations
                 </ConfirmButton>
@@ -53,7 +53,7 @@ const search = () => {
     )
 }
 
-export default search
+export default Search
 
 const Wrapper = tw.div`
     bg-gray-200 h-screen

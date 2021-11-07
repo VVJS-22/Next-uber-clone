@@ -6,7 +6,7 @@ import RideSelector from "../components/RideSelector"
 import Link from 'next/link'
 import { BackButton } from "./search"
 
-const confirm = () => {
+const Confirm = () => {
 
     const router = useRouter()
     const { pickup, dropoff } = router.query
@@ -47,7 +47,7 @@ const confirm = () => {
 
     return (
         <Wrapper>
-            <Link href="/search">
+            <Link href="/search" passHref={true}>
                     <SearchBackButton src="/back.png" alt="back"/>
             </Link>
             <Map
@@ -66,7 +66,7 @@ const confirm = () => {
     )
 }
 
-export default confirm
+export default Confirm
 
 const Wrapper = tw.div`
     flex h-screen flex-col

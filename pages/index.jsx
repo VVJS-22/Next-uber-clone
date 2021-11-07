@@ -17,7 +17,7 @@ export default function Home() {
           </Profile>
         </Header>
         <ActionButtons>
-          <Link href="/search">
+          <Link href="/search" passHref={true}>
             <ActionButton>
               <ActionButtonImage src="/ride.png" alt="image"/>
               Ride
