@@ -7,6 +7,8 @@ const Search = () => {
     const [pickup, setPickup] = useState("")
     const [dropoff, setDropoff] = useState("")
 
+    const isInvalid = pickup === "" | dropoff === ""
+
     return (
         <Wrapper>
             <ButtonContainer>
@@ -45,9 +47,11 @@ const Search = () => {
                     dropoff: dropoff
                 }
             }} passHref={true}>
-                <ConfirmButton>
-                    Confirm Locations
-                </ConfirmButton>
+                <Deck>
+                    <ConfirmButton disabled={isInvalid}>
+                        Confirm Locations
+                    </ConfirmButton>
+                </Deck>
             </Link>
         </Wrapper>
     )
@@ -108,6 +112,10 @@ const StarIcon = tw.img`
     bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
 `
 
-const ConfirmButton = tw.div`
-    bg-black text-white text-center mt-2 mx-4 px-4 py-3 text-2xl cursor-pointer
+const Deck = tw.div`
+    flex justify-center
+`
+
+const ConfirmButton = tw.button`
+    bg-black text-white text-center mt-2 mx-3 px-4 py-3 text-2xl cursor-pointer w-full disabled:opacity-50
 `
