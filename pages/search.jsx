@@ -26,12 +26,12 @@ const Search = () => {
                     <Input 
                     placeholder="Enter pickup location"
                     value={pickup}
-                    onChange={(e)=> setPickup(e.target.value)}
+                    onChange={(e)=> setPickup(e.target.value.toLowerCase())}
                     />
                     <Input 
                     placeholder="Where to?"
                     value={dropoff}
-                    onChange={(e)=> setDropoff(e.target.value)}
+                    onChange={(e)=> setDropoff(e.target.value.toLowerCase())}
                     />
                 </InputBoxes>
                 <PlusIcon src="/plus-math.png" alt="add"/>
